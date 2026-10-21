@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drum Machine</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- FontAwesome for Control Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div id="drum-machine">
+    <!-- Top Header / Branding -->
+    <div class="brand">
+      <span class="logo-mark"><i class="fa-solid fa-wave-square"></i></span>
+      <span class="logo-text">BEATSTUDIO <small>PRO-9</small></span>
+      <div class="power-indicator active" id="power-led"></div>
+    </div>
+
+    <!-- Central Control Panel & Display -->
+    <div class="control-panel">
+      <!-- Screen Section -->
+      <div class="screen-container">
+        <div id="display">HEATER KIT</div>
+        <div class="visualizer" id="visualizer">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+
+      <!-- Controls Row -->
+      <div class="controls-row">
+        <!-- Power Switch -->
+        <div class="control-group">
+          <label>POWER</label>
+          <button class="toggle-btn active" id="power-btn" aria-label="Toggle Power">
+            <span class="toggle-slider"></span>
+          </button>
+        </div>
+
+        <!-- Sound Bank Switch -->
+        <div class="control-group">
+          <label id="bank-label">BANK 1</label>
+          <button class="toggle-btn" id="bank-btn" aria-label="Toggle Sound Bank">
+            <span class="toggle-slider"></span>
+          </button>
+        </div>
+
+        <!-- Volume Slider -->
+        <div class="control-group volume-group">
+          <div class="volume-header">
+            <label><i class="fa-solid fa-volume-high"></i> VOL</label>
+            <span id="volume-val">40%</span>
+          </div>
+          <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.4">
+        </div>
+      </div>
+    </div>
+
+    <!-- Drum Pad Grid (User Stories #3 & #4) -->
+    <div class="pad-grid">
+      <div class="drum-pad" id="Heater-1">
+        Q
+        <audio class="clip" id="Q" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-1.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Heater-2">
+        W
+        <audio class="clip" id="W" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-2.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Heater-3">
+        E
+        <audio class="clip" id="E" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-3.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Heater-4">
+        A
+        <audio class="clip" id="A" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-6.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Clap">
+        S
+        <audio class="clip" id="S" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Dsc_Oh.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Open-HH">
+        D
+        <audio class="clip" id="D" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Kick_n_Hat.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Kick-n'-Hat">
+        Z
+        <audio class="clip" id="Z" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/RP4_KICK_1.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Kick">
+        X
+        <audio class="clip" id="X" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/cev_cut2.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Closed-HH">
+        C
+        <audio class="clip" id="C" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Cev_s3.mp3"></audio>
+      </div>
+    </div>
+  </div>
+
+  <!-- FreeCodeCamp Test Script CDN -->
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <!-- Main Script -->
+  <script src="script.js"></script>
+</body>
+</html>
